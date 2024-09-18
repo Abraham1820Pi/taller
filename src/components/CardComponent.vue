@@ -55,4 +55,12 @@ export default {
     display: flex;
     gap: 10px;
 }
+.imagen {
+    height: 12rem;
+    ;
+    object-fit: cover;
+    object-position: center center;
+    background: #EDEDED;
+    border-radius: 5px;
+}
 </style>
