@@ -1,11 +1,10 @@
 <template>
     <div class="Cards" id="Cards">
-        <div v-for="Pokemons in PokemonResponse" :key="Pokemons.id">
-            <div class="carta"><img class="imagen" :src=Pokemons.imagen alt="">
-                <h4>{{ Pokemons.nombre }}</h4>
-                <div class="habilidades" :style="{ 'background-color': Pokemons.type_color }">
-                    <span>{{ Pokemons.type_name }}</span>
-                </div>
+        <div v-for="Pokemons in PokemonResponse" :key="Pokemons.id" class="carta">
+            <img class="imagen" :src=Pokemons.imagen alt="">
+            <h4>{{ Pokemons.nombre }}</h4>
+            <div class="habilidades" :style="{ 'background-color': Pokemons.type_color }">
+                <span class="span">{{ Pokemons.type_name }}</span>
             </div>
         </div>
     </div>
@@ -37,6 +36,7 @@ export default {
     width: 12rem;
     z-index: 1;
 }
+
 .Cards {
     width: 80%;
     margin: auto;
@@ -44,20 +44,21 @@ export default {
     flex-wrap: wrap;
     gap: 15px;
 }
+
 .span {
-    /* padding: 0 1px; */
     border-radius: 5px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
 }
+
 .habilidades {
     display: flex;
     gap: 10px;
 }
+
 .imagen {
     height: 12rem;
-    ;
     object-fit: cover;
     object-position: center center;
     background: #EDEDED;
